@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\Crontab;
+namespace ArrowJustDoIt\Crontab;
 
 use Illuminate\Support\ServiceProvider;
 

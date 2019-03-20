@@ -21,13 +21,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Encore\\Crontab\\": "src/"
+            "ArrowJustDoIt\\Crontab\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Encore\\Crontab\\CrontabServiceProvider"
+                "ArrowJustDoIt\\Crontab\\CrontabServiceProvider"
             ]
 
         }
