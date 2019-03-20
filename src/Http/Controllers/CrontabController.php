@@ -140,7 +140,7 @@ class CrontabController extends Controller
         $form = new Form(new Crontab);
 
         $form->text('title', '任务标题')->rules('required',['required'=>'任务标题不能为空']);
-        $form->select('type','任务类型')->options(self::CRONTAB_TYPE)->help("1. URL类型是完整的URL地址，如： <code>http://www.baidu.com/</code> ；<br>2. 如果你的服务器 php.ini 未开启 <code>shell_exec()</code> 函数，则不能使用本地URL类型模式和Shell类型！")->rules('required|in:url,sql,shell',['required'=>'任务类型不能为空','in'=>'参数错误']);
+        $form->select('type','任务类型')->options(self::CRONTAB_TYPE)->help("1. URL类型是完整的URL地址，如： <code>http://www.baidu.com/</code> ；<br>2. 如果你的服务器 php.ini 未开启 <code>shell_exec()</code> 函数，则不能使用URL类型和Shell类型模式！")->rules('required|in:url,sql,shell',['required'=>'任务类型不能为空','in'=>'参数错误']);
         $form->textarea('contents', '内容')->rows(3)->rules('required',['required'=>'内容不能为空']);
         $form->text('schedule', '执行周期')->default('* * * * *')->help("请使用<code>Cron</code>表达式")->rules(function ($form) {
             $value = $form->model()->schedule;
