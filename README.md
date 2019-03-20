@@ -14,12 +14,8 @@ Crontab extension for laravel-admin
 ## 安装
 
 ```bash
-composer require ArrowJustDoIt/crontab
-```
-
-然后
-```bash
-php artisan vendor:publish --provider=Encore\Crontab\CrontabServiceProvider
+composer require arrowjustdoit/crontab
+php artisan migrate
 ```
 
 ## 配置
@@ -37,6 +33,22 @@ php artisan vendor:publish --provider=Encore\Crontab\CrontabServiceProvider
     ]
 
 ```
+
+在服务器中配置crontab
+
+```
+crontab -e #回车
+#>>后面为日志文件,可加可不加
+* * * * * php /your web dir/artisan autotask:run >>/home/crontab.log 2>&1 
+```
+
+##访问
+
+```
+https://your domain/admin/crontabs #定时任务列表
+https://your domain/admin/crontabLogs #定时任务日志列表
+```
+
 ``````
 License
 ------------

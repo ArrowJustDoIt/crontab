@@ -1,7 +1,7 @@
 <?php
 
-use Encore\Crontab\Http\Controllers\CrontabController;
-use Encore\Crontab\Http\Controllers\CrontabLogController;
+use ArrowJustDoIt\Crontab\Http\Controllers\CrontabController;
+use ArrowJustDoIt\Crontab\Http\Controllers\CrontabLogController;
 
 Route::resource('crontabs', CrontabController::class);
 Route::resource('crontabLogs', CrontabLogController::class);
