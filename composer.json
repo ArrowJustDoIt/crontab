@@ -1,0 +1,35 @@
+{
+    "name": "ArrowJustDoIt/crontab",
+    "description": "Crontab extension for laravel-admin",
+    "type": "library",
+    "keywords": ["laravel-admin", "extension", "crontab"],
+    "homepage": "https://github.com/ArrowJustDoIt/crontab",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "arrow",
+            "email": "arrowylq@outlook.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "encore/laravel-admin": "~1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Encore\\Crontab\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Encore\\Crontab\\CrontabServiceProvider"
+            ]
+
+        }
+    }
+}
