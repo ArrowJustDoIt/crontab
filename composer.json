@@ -1,5 +1,5 @@
 {
-    "name": "ArrowJustDoIt/crontab",
+    "name": "arrowjustdoit/crontab",
     "description": "Crontab extension for laravel-admin",
     "type": "library",
     "keywords": ["laravel-admin", "extension", "crontab"],
