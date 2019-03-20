@@ -42,7 +42,7 @@ crontab -e #回车
 * * * * * php /your web dir/artisan autotask:run >>/home/crontab.log 2>&1 
 ```
 
-##访问
+## 访问
 
 ```
 https://your domain/admin/crontabs #定时任务列表
