@@ -9,6 +9,8 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use Cron\CronExpression;
 use Illuminate\Support\Facades\DB;
+use Symfony\Component\Process\Process;
+
 
 class autoTask extends Command
 {
@@ -125,8 +127,16 @@ class autoTask extends Command
                         $this->saveLog('sql', $value['id'], $value['title'], $status, $remark);
                         break;
                     case 'shell':
-                        $request = shell_exec($value['contents'] . ' 2>&1');
-                        $this->saveLog('shell', $value['id'], $value['title'], 1, $request);
+                        $status = 0;
+                        $request = 'fail';
+
+                        $process = new Process($value['contents']);
+                        $process->run();
+                        if ($process->isSuccessful()) {
+                            $status = 1;
+                            $request = $process->getOutput();
+                        }
+                        $this->saveLog('shell', $value['id'], $value['title'], $status, $request);
                         break;
                 }
             }
