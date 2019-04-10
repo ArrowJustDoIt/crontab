@@ -6,6 +6,7 @@ use ArrowJustDoIt\Crontab\Http\Models\CrontabLog;
 use Illuminate\Routing\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Grid;
+use Encore\Admin\Form;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
 
@@ -107,5 +108,14 @@ class CrontabLogController extends Controller
         return $show;
     }
 
-
+    /**
+     * Make a form builder.
+     *
+     * @return Form
+     */
+    protected function form()
+    {
+        $form = new Form(new CrontabLog);
+        return $form;
+    }
 }
