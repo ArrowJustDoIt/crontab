@@ -37,9 +37,8 @@ php artisan migrate
 在服务器中配置crontab
 
 ```
-crontab -e #回车
-#>>后面为日志文件,可加可不加
-* * * * * php /your web dir/artisan autotask:run >>/home/crontab.log 2>&1 
+crontab -e //回车
+* * * * * php /your web dir/artisan autotask:run >>/home/crontab.log 2>&1 //>>后面为日志文件保存地址,可加可不加
 ```
 
 ## 访问
