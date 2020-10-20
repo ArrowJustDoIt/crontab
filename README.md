@@ -2,6 +2,7 @@ Crontab extension for laravel-admin
 ======
 
 [Crontab](https://github.com/ArrowJustDoIt/Crontab)是一个laravel-admin后台的定时任务扩展插件,你可以通过此插件定时执行shell、sql以及访问指定链接
+[dcat-admin版本](https://github.com/ArrowJustDoIt/dcat-admin-crontab-extension)
 
 ## 截图
 ![crontab列表](https://raw.githubusercontent.com/ArrowJustDoIt/crontab/master/crontab_list.png)
